@@ -1,14 +1,15 @@
 import { BrowserRouter, Outlet, Route } from "react-router-dom";
 import Header from "./components/Header";
+import Context from "./context/Context";
 
 function App() {
   return (
-    <>
-        <Header />
-        <div>
-          <Outlet />
-        </div>
-    </>
+    <Context>
+      <Header />
+      <div>
+        <Outlet />
+      </div>
+    </Context>
   );
 }
 
