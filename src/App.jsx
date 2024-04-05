@@ -1,12 +1,13 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Outlet, Route } from "react-router-dom";
 import Header from "./components/Header";
 
 function App() {
   return (
     <>
-      <BrowserRouter className="">
         <Header />
-      </BrowserRouter>
+        <div>
+          <Outlet />
+        </div>
     </>
   );
 }
