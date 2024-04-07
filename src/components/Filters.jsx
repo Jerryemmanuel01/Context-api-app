@@ -27,7 +27,7 @@ const Filters = () => {
               payload: "lowToHigh",
             })
           }
-          checked={sort === "lowToHIgh" ? true : false}
+          checked={sort === "lowToHigh" ? true : false}
         />
         <Form.Check
           inline
@@ -49,10 +49,12 @@ const Filters = () => {
           name="group1"
           type="checkbox"
           id={`inline-3`}
-          onChange={() => productDispatch({
-            type: "FILTER_BY_STOCK",
-          })}
-          checked= {byStock}
+          onChange={() =>
+            productDispatch({
+              type: "FILTER_BY_STOCK",
+            })
+          }
+          checked={byStock}
         />
         <Form.Check
           inline
@@ -60,9 +62,11 @@ const Filters = () => {
           name="group1"
           type="checkbox"
           id={`inline-4`}
-          onChange={() => productDispatch({
-            type:"FILTER_BY_DELIVERY"
-          })}
+          onChange={() =>
+            productDispatch({
+              type: "FILTER_BY_DELIVERY",
+            })
+          }
           checked={byFastDelivery}
         />
       </span>
@@ -79,9 +83,16 @@ const Filters = () => {
           style={{ cursor: "pointer" }}
         />
       </span>
-      <Button variant="light" onClick={() => productDispatch({
-        type: "CLEAR_FILTERS"
-      })}>Clear Filters</Button>
+      <Button
+        variant="light"
+        onClick={() =>
+          productDispatch({
+            type: "CLEAR_FILTERS",
+          })
+        }
+      >
+        Clear Filters
+      </Button>
     </div>
   );
 };
