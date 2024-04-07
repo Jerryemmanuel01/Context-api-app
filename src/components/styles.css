@@ -48,3 +48,6 @@
     padding: 0 20;
     flex-direction: column;
 }
+.summary{
+    width: 30%;
+}
