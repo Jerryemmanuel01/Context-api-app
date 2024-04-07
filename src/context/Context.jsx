@@ -21,7 +21,7 @@ const Context = ({ children }) => {
     cart: []
   })
 
-  return <Cart.Provider value={{state, dispatch}}>{children}</Cart.Provider>;
+  return <Cart.Provider value={{ state , dispatch }}>{children}</Cart.Provider>;
 };
 
 export default Context;
