@@ -1,9 +1,19 @@
-import React from 'react'
+import { CartState } from "../context/Context"
 
 const Home = () => {
+  const {
+    state: { products },
+  } = CartState();
   return (
-    <div>
-      Home
+    <div className="home">
+       {/* <Filters /> */}
+       <div className="productContainer">
+        {
+          products.map((product) => (
+            <span>{product.name}</span>
+          ))
+        }
+       </div>
     </div>
   )
 }
