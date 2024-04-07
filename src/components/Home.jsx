@@ -1,4 +1,5 @@
 import { CartState } from "../context/Context"
+import Filters from "./Filters";
 import SingleProduct from "./SingleProduct";
 import "./styles.css"
 
@@ -8,7 +9,7 @@ const Home = () => {
   } = CartState();
   return (
     <div className="home">
-       {/* <Filters /> */}
+       <Filters />
        <div className="productContainer">
         {
           products.map((product) => (
