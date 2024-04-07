@@ -1,11 +1,6 @@
-import React from 'react'
-
-const Cart = () => {
-  return (
-    <div>
-      Cart
-    </div>
-  )
-}
-
-export default Cart
+export const cartReducer = (state, action) => {
+  switch (action.type) {
+    default:
+      return state;
+  }
+};
